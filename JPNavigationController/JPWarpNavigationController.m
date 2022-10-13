@@ -65,7 +65,7 @@ static NSString *const kJPWarpNavigationControllerBackImageName = @"JPNavigation
     for (UIScrollView *scrollView in scrollViews) {
         // offset to the correct position.
         if (!self.initializedTopViewController) {
-            [scrollView setContentOffset:CGPointMake(0, -scrollView.contentInset.top)];
+            [scrollView setContentOffset:CGPointMake(scrollView.contentOffset.x, -scrollView.contentInset.top)];
             self.initializedTopViewController = YES;
         }
     }
